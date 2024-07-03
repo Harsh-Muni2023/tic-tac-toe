@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&family=Six+Caps&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            height: 100vh;
+            width: 100%;
+            background: #373F51;
+        }
+        .container{
+            position: absolute;
+            left: 20%;
+            top: 10%;
+            width: 23vw;
+            height: 47vh;
+        }
+        .boxes{
+            height: 38vh;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            /* padding: 19px; */
+            /* font-size: 25vmin; */
+        }
+        h1{
+            font-size:40px;
+            font-weight: 300;
+            color: #fff;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .boxes button{
+            border:none;
+            outline:none;
+            border-radius: .5rem;
+            font-size: 3rem;
+            background: #0081a7;
+            color: #fdfffc;
+            cursor: pointer;
+        }
+        .boxes button:active{
+            transform: scale(1.1);
+            transition: all 0.5s;
+        }
+        #reset{
+            background: #4361ee;
+            color: white;
+            border: none;
+            outline: none;
+            font-size: 1.5rem;
+            padding: 10px 23px;
+            position: relative;
+            top: 5%;
+            left: 34%;
+            cursor: pointer;
+        }
+        #reset:active{
+            transform: scale(1.1);
+            transition: all 0.5s;
+        }
+        #text{
+            position: absolute;
+            font-size: 73px;
+            color: white;
+            font-weight: 500;
+            left: 59%;
+            top: 6%;
+        }
+        @media only screen and (max-width:480px){
+            .container {
+            left: 7%;
+            width: 84vw;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <div class="boxes">
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+        </div>
+        <button id="reset">Reset</button>
+    </div>
+    <div id="text"></div>
+    <script src="calci.js">
+    </script>
+</body>
+</html>
